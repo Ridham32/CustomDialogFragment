@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="mainActivity"
+            type="com.ridhamsharma.customDialogFragment.MainActivity" />
+        <import type="com.ridhamsharma.customDialogFragment.MainClickTypes"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open dialog"
+        android:onClick="@{() ->mainActivity.buttonClick(MainClickTypes.OpenFragment)}"
+        android:layout_gravity="center"
+       />
+
+    </LinearLayout>
+</layout>
